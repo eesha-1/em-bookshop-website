@@ -1,0 +1,338 @@
+html, body, div, section, header, nav, ul, ol, li, h1, h2, h3, p,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+    background: #9bbcb5; /*background colour*/
+}
+
+/*set font, size of font, background colour for page*/
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #9bbcb5; 
+}
+
+/*colour and text of header where EM Bookshop name is*/
+header {
+    background-color: #9bbcb5; 
+    color: white; 
+    text-align: center; 
+    padding: 20px;
+}
+
+h1 {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 35px; 
+  font-weight: bold;
+  color: #120098; 
+}
+
+/*style the navigation bar: */
+nav {
+  background-color: #2f8eba; 
+}
+
+nav ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: center; 
+  padding: 10px 0;
+}
+
+nav a {
+  font-family: Arial, sans-serif;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+nav a.active {
+  background-color: #2f8eba; 
+  color: white;
+}
+
+/*Library button styling*/
+.library-button {
+  display: block;
+  width: 300px;
+  height: 150px;
+  margin: 40px auto;
+  background-color: #bab10a;
+  text-align: center;
+  text-decoration: none;
+  color: #333; 
+}
+
+.library-button h2 {
+  line-height: 150px;
+  font-size: 30px;
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+/*effect when you hover over library button*/
+.library-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*putting the books in 2 columns*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center; 
+  padding: 20px; 
+}
+
+/*book styling*/
+.book{
+  width: 100%; 
+  max-width: 500px; 
+  height: 250px; 
+  background-color: #436478;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  transition: transform 0.3s ease;
+}
+
+/*effect for when you hover over a book*/
+.book:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.book img {
+  width: 100%;
+  max-width: 150px;
+  height: 200px;
+  object-fit: contain; 
+  border-radius: 8px;
+}
+
+.book-columns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.book-image{
+  flex: 1;
+}
+
+/*info of each book stylingg*/
+.book-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+/*styling book headings/paraghraphs layout*/
+.book-info h3 {
+  margin-bottom: 5px;
+}
+
+.book-info p {
+  margin-bottom: 10px;
+}
+
+.book h3 {
+  font-size: 20px;
+  color: #120098;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+.book p{
+  font-size: 14px;
+  color: white; 
+  margin-bottom: 15px; 
+}
+
+/*paybutton styling*/
+.book button {
+  padding: 10px 20px;
+  background-color: #2f8eba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
+
+/*when you hover over the pay button it changes from lighter blue to dark blue*/
+.book button:hover {
+  background-color: #120098; 
+}
+/*bestselling section styling*/
+.bestselling h2{
+  text-align: left;
+  margin: 30px 15px 10px 30px;
+  font-size: 20px;
+  color: #a70014;
+  font-family: 'Playwrite AU SA', sans-serif;
+}
+
+.firegif {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+/*harry potter section styling*/
+.harrypotter h2 {
+  text-align: left;
+  margin: 30px 15px 10px 30px;
+  font-size: 20px;
+  color: #a70014;
+  font-family: 'Playwrite AU SA', sans-serif;
+}
+/*arrow on the home page that leads to library button*/
+.arrow {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  margin-top: 40px; 
+}
+.arrow p{
+  font-size: 20px;
+  color: #656005;
+  font-family: 'Poetsen One', cursive;
+  margin-right: 10px; 
+}
+.arrowsign {
+  font-size: 50px;
+  margin-right: 10px; 
+  margin-top: 15px;
+  color: #2f8eba;
+  font-weight: bold;}
+
+/*styling payment modal*/
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(205, 115, 244, 0.3); 
+  padding-top: 50px;
+}
+.modal-content {
+  background-color: #99dc97; 
+  margin: 10% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px; 
+  font-family: Arial, sans-serif; 
+}
+
+/*styling for the x cross at the top right corner*/
+.close {
+  color: #710808;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+/*submit payment button styling*/
+button {
+  background-color: #070ab9; 
+  color: rgb(255, 255, 255); 
+  padding: 12px 20px;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size:16px;
+  width: 100%; 
+}
+button:hover {
+  background-color: #bc4fba; 
+}
+/*input box styling*/
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border:3px solid #07d7c5;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing:border-box;
+}
+/*Cardnumber,expiry month, year, cvv text styling*/
+label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+  color: #070ab9;
+}
+/*payment details text style and best selling and harry potter book collection styling*/
+h2{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom:20px;
+  font-weight: bold;
+  color: #ac2727; 
+  text-decoration: underline;
+}
+/*styling for success page message +card details*/
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #5ecad0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/*card logos on top of payment form keeping width of each logo same and height */
+.card-logo {
+  width: 50px;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

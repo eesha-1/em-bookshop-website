@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful</title>
+  <link rel="stylesheet" href="css/style.css"> <!--link to css stylesheet-->
+</head>
+<body class="success-page">
+  <div class="container"> <!--success message container-->
+    <h2>Payment Successful!</h2>
+    <p>Thank you for your purchase, Your payment has been processed.</p>
+<!--show the last 4 digits of card on success page-->
+    <div class="card-info">
+      Your card ending in: <span id="cardNumber"></span>
+    </div>
+<!--link to go to home page-->
+    <a href="index.html">Back to Home</a>
+  </div>
+
+  <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var lastFourDigits = urlParams.get('card');
+    document.getElementById('cardNumber').textContent= '**** **** **** ' + lastFourDigits;
+  </script>
+</body>
+</html>
+
